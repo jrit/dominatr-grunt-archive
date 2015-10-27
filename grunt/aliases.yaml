@@ -4,9 +4,7 @@ default:
 
 buildcore:
   - clean:build
-  - concat:scripts
-  - concat:angular
-  - concat:components
+  - browserify
   - less
   - postcss
   - copy
@@ -64,9 +62,8 @@ deploy:
   - clean
   - buildcore
   - clean:modules
-  - babel
   - uglify
-  - concat:dist
+  - browserify
   - rev
   - s3
   - cloudfront

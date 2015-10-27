@@ -5,20 +5,10 @@ module.exports = {
         livereload: true,
         event: [ "changed", "added", "deleted" ]
     },
-    angular:
+    browserify:
     {
-        files: "<%= concat.angular.src %>",
-        tasks: [ "concat:angular" ]
-    },
-    components:
-    {
-        files: "<%= concat.components.src %>",
-        tasks: [ "concat:components" ]
-    },
-    scripts:
-    {
-        files: "<%= concat.scripts.src %>",
-        tasks: [ "envLocal", "newer:jshint:dev", "concat:scripts", "replace" ]
+        files: "source/modules/**/*.js",
+        tasks: [ "envLocal", "newer:jshint:dev", "browserify", "replace" ]
     },
     styles:
     {
