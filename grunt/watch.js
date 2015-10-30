@@ -24,7 +24,7 @@ module.exports = {
     index:
     {
         files: "source/modules/_app/templates/index.html",
-        tasks: [ "envLocal", "includeSource", "ejs", "replace" ]
+        tasks: [ "envLocal", "ejs", "replace" ]
     },
     fonts:
     {
