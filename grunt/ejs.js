@@ -6,8 +6,7 @@ module.exports = {
             useSource: "<%= useSource %>",
             useDist: "<%= useDist %>"
         },
-        src: "build/index.html",
-        dest: "build/index.html",
-        overwrite: true
+        src: "source/modules/_app/templates/index.html",
+        dest: "build/index.html"
     }
 };
