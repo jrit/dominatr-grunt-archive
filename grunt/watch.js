@@ -5,10 +5,16 @@ module.exports = {
         livereload: true,
         event: [ "changed", "added", "deleted" ]
     },
-    browserify:
+    scripts:
     {
         files: "source/modules/**/*.js",
         tasks: [ "envLocal", "newer:jshint:dev", "browserify", "replace" ]
+    },
+    templates:
+    {
+        options: { cwd: "<%= ngtemplates.build.cwd %>" },
+        files: "<%= ngtemplates.build.src %>",
+        tasks: [ "envLocal", "ngtemplates", "browserify", "replace" ]
     },
     styles:
     {
@@ -19,12 +25,6 @@ module.exports = {
     {
         files: "source/modules/_app/templates/index.html",
         tasks: [ "envLocal", "includeSource", "ejs", "replace" ]
-    },
-    templates:
-    {
-        options: { cwd: "<%= ngtemplates.build.cwd %>" },
-        files: "<%= ngtemplates.build.src %>",
-        tasks: [ "envLocal", "ngtemplates", "replace" ]
     },
     fonts:
     {

@@ -4,15 +4,14 @@ default:
 
 buildcore:
   - clean:build
-  - browserify
   - less
   - postcss
   - copy
   - svg_sprite
   - svgmin
-  - includeSource
   - ejs
   - ngtemplates
+  - browserify
   - replace
 
 test:

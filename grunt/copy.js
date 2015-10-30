@@ -1,33 +1,8 @@
+"use strict";
+
 module.exports = function ( grunt )
 {
-    "use strict";
-
     return {
-        scripts:
-        {
-            expand: true,
-            cwd: "source/modules/",
-            src: [
-                "*/*.js",
-                "*/*/*.js",
-                "!**/*.spec.js",
-                "!*/tests/**/*.*"
-            ],
-            filter: function ( filepath )
-            {
-                if( /mocks.+replace\.js/.test( filepath ) )
-                {
-                    return grunt.option( "replacemocks" );
-                }
-                else if( /mocks/.test( filepath ) )
-                {
-                    return grunt.option( "mocks" );
-                }
-
-                return true;
-            },
-            dest: "build/modules/"
-        },
         fonts: {
             expand: true,
             cwd: "source/fonts/",

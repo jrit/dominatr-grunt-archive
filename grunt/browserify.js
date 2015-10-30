@@ -1,14 +1,14 @@
+"use strict";
+
 module.exports = function ( grunt )
 {
-    "use strict";
-
     var files = [
         "source/modules/index.js"
     ];
 
     if( grunt.option( "mocks" ) )
     {
-        files.push( "source/modules/mocks.js" );
+        files.push( "source/modules/mocks/index.js" );
     }
 
     return {
@@ -19,7 +19,15 @@ module.exports = function ( grunt )
                     [ "babelify", {
                        loose: "all"
                     } ]
-                ]
+                ],
+                browserifyOptions: {
+                    noParse: [
+                        "jquery",
+                        "angular",
+                        "angular-route",
+                        "angular-touch",
+                        "angular-sanitize" ]
+                }
             },
             files: {
                 "build/dist.js": files
