@@ -1,18 +1,5 @@
 module.exports = {
-    project:
-    {
-        options: {
-            mangle: {},
-            compress: {},
-            sourceMap: false
-        },
-        files:
-        {
-            "build/project.js": "build/project.js",
-            "build/templates.js": "build/templates.js"
-        }
-    },
-    libraries:
+    dist:
     {
         options:
         {
@@ -22,8 +9,7 @@ module.exports = {
         },
         files:
         {
-            "build/angular.js": "build/angular.js",
-            "build/components.js": "build/components.js"
+            "build/dist.js": "build/dist.js"
         }
     }
 };
