@@ -19,6 +19,7 @@ test:
   - rev
   - protractor_coverage:local
   - makeReport
+  - replace:coverage
   - jshint:dev
 
 teststack:
@@ -29,6 +30,7 @@ teststack:
   - localstack
   - protractor_coverage:stack
   - makeReport
+  - replace:coverage
 
 rev:
   - filerev

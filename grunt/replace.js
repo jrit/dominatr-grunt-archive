@@ -1,5 +1,7 @@
 "use strict";
 
+var path = require( "path" );
+
 var replacements = [
     {
         from: "{{ APIROOT }}",
@@ -18,11 +20,11 @@ module.exports = {
         replacements: replacements
     },
     coverage: {
-        src: [ "coverage/**/*.json" ],
+        src: [ "coverage/**/lcov.info" ],
         overwrite: true,
         replacements: [ {
-            from: "./build/",
-            to: "build/"
+            from: path.resolve( "." ),
+            to: ""
         } ]
     }
 };
