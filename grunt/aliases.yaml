@@ -9,34 +9,25 @@ buildcore:
   - copy
   - svg_sprite
   - svgmin
-  - ejs
   - ngtemplates
   - browserify
   - replace
 
 test:
   - envLocal
-  - envUseSource
   - buildcore
-  - instrument
   - rev
   - protractor_coverage:local
-  - envDontUseSource
-  - buildcore
   - makeReport
   - jshint:dev
 
 teststack:
   - envLocal
-  - envUseSource
   - buildcore
   - jshint:deploy
-  - instrument
   - rev
   - localstack
   - protractor_coverage:stack
-  - envDontUseSource
-  - buildcore
   - makeReport
 
 rev:

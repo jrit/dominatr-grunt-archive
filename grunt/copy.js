@@ -53,6 +53,11 @@ module.exports = function ( grunt )
                 "**/*.*"
             ],
             dest: "build/audio/"
+        },
+        index:
+        {
+            src: "source/modules/_app/templates/index.html",
+            dest: "build/index.html"
         }
     };
 };
