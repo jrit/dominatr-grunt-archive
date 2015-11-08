@@ -23,7 +23,7 @@ module.exports = {
         src: [ "coverage/**/lcov.info" ],
         overwrite: true,
         replacements: [ {
-            from: path.resolve( "." ) + path.delimiter,
+            from: path.resolve( "." ),
             to: ""
         } ]
     }
