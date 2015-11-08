@@ -6,15 +6,12 @@ module.exports = function ( grunt )
         "source/modules/index.js"
     ];
 
-    var transform = [
-        [ "babelify", {
-           loose: "all"
-       } ] ];
+     if( grunt.option( "mocks" ) )
+     {
+         files.push( "source/modules/mocks/index.js" );
+     }
 
-    if( grunt.option( "mocks" ) )
-    {
-        files.push( "source/modules/mocks/index.js" );
-    }
+    var transform = [];
 
     if( grunt.option( "tests" ) )
     {
@@ -25,9 +22,13 @@ module.exports = function ( grunt )
                 "**/tests/**",
                 "**/templates.js",
                 "**/*mock-*.js",
-                "source/modules/mocks/**" ]
+                "**/source/modules/mocks/**" ]
         } ] );
     }
+
+    transform.push( [ "babelify", {
+       loose: "all"
+    } ] );
 
     return {
         dist:
@@ -35,7 +36,7 @@ module.exports = function ( grunt )
             options: {
                 transform: transform,
                 browserifyOptions: {
-                    debug: !!grunt.option( "mocks" ),
+                    debug: !!grunt.option( "tests" ),
                     noParse: [
                         "jquery",
                         "angular",
