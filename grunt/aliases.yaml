@@ -21,6 +21,7 @@ test:
   - makeReport
   - replace:coverage
   - jshint:dev
+  - buildcore # cleanup/restore
 
 teststack:
   - envLocal
