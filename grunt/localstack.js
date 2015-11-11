@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
     options: {
         key: process.env.BROWSERSTACK_KEY,

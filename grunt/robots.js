@@ -1,7 +1,7 @@
+"use strict";
+
 module.exports = function ( grunt )
 {
-    "use strict";
-
     grunt.registerTask( "envRobotsIndex", "Set robots.txt to index the site", function ()
     {
         grunt.config( "useRobotsIndex", true );

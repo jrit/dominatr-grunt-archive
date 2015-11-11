@@ -1,7 +1,7 @@
+"use strict";
+
 module.exports = function ()
 {
-    "use strict";
-
     var src = [
         "source/modules/*/*.js",
         "source/modules/*/*/*.js",

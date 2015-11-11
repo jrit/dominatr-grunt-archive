@@ -1,7 +1,7 @@
+"use strict";
+
 module.exports =  function ( grunt )
 {
-    "use strict";
-
     return {
         options: {
             module: "App",
