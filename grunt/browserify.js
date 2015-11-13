@@ -6,10 +6,14 @@ module.exports = function ( grunt )
         "source/modules/index.js"
     ];
 
-     if( grunt.option( "mocks" ) )
-     {
-         files.push( "source/modules/mocks/index.js" );
-     }
+    if( grunt.option( "mocks" ) === "i"  || grunt.option( "mocks" ) === "integration" )
+    {
+        files.push( "source/modules/mocks/integration.js" );
+    }
+    else if( grunt.option( "mocks" ) )
+    {
+        files.push( "source/modules/mocks/index.js" );
+    }
 
     var transform = [];
 
