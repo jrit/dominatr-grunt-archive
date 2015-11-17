@@ -53,9 +53,7 @@ deploy:
   - envUseDist
   - clean
   - buildcore
-  - clean:modules
   - uglify
-  - browserify
   - rev
   - s3
   - cloudfront
