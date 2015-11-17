@@ -30,9 +30,7 @@ module.exports = function ( grunt )
         } ] );
     }
 
-    transform.push( [ "babelify", {
-       loose: "all"
-    } ] );
+    transform.push( [ "babelify", { presets: [ "es2015" ] } ] );
 
     return {
         dist:
