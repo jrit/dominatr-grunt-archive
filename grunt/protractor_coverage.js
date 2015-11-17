@@ -11,6 +11,7 @@ module.exports = {
     },
     local: {
         options: {
+            keepAlive: true,
             configFile: "tests/config/protractor-config.js"
         }
     },
