@@ -4,6 +4,7 @@ default:
 
 buildcore:
   - clean:build
+  - truecolors_less
   - less
   - postcss
   - copy
