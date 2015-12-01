@@ -40,7 +40,7 @@ module.exports = {
         files: [
             "source/images/**/*.*"
         ],
-        tasks: [ "copy:images" ]
+        tasks: [ "copy:images", "svgmin", "svg_sprite" ]
     },
     favicon:
     {
