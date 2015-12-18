@@ -58,3 +58,4 @@ deploy:
   - rev
   - s3
   - cloudfront
+  - sendBuildEmail
